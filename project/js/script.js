@@ -1,16 +1,17 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', () => {
+const movieDB = {
+    movies: [
+        "Логан",
+        "Лига справедливости",
+        "Ла-ла лэнд",
+        "Одержимость",
+        "Скотт Пилигрим против..."
+    ]
+};
 
-    const movieDB = {
-        movies: [
-            "Логан",
-            "Лига справедливости",
-            "Ла-ла лэнд",
-            "Одержимость",
-            "Скотт Пилигрим против..."
-        ]
-    };
+
+document.addEventListener('DOMContentLoaded', () => {
 
     const advElements = document.querySelectorAll('.promo__adv img'),
         promoGenre = document.querySelector('.promo__genre'),
@@ -74,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         movieDB.movies.sort();  
 
         createMovieList(movieDB.movies, promoList);
+        
     });
     
     createMovieList(movieDB.movies, promoList);
